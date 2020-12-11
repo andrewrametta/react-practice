@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="application-root"></div>
+  </body>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script type="text/babel">
+    function App() {
+      return (
+        <div>
+          <Header />
+          <Intro />
+          <Education />
+          <Work />
+          <Contact />
+        </div>
+      );
+    }
+    function Header() {
+      return (
+        <div>
+          <header>
+            <h1>Jerry Seinfeld</h1>
+            <img
+              src={`https://imgc.allpostersimages.com/img/print/u-g-Q1E4JA80.jpg?w=550&h=550&p=0`}
+              alt={`Jerry Seinfeld headshot`}
+              width={`200px`}
+            />
+          </header>
+        </div>
+      );
+    }
+
+    function Intro() {
+      return (
+        <div>
+          <section id="introduction">
+            <p>
+              Hi I'm Jerry Seinfeld and I am a comedian, writer, and TV star.
+            </p>
+          </section>
+        </div>
+      );
+    }
+
+    function Contact() {
+      return (
+        <div>
+          <section id="Contact-section">
+            <p>My contact information: </p>
+            <address id="Contact-info">
+              <p>My name is Jerry</p>
+              <p>
+                My email is:{" "}
+                <a href="mailto://jerry@seinfeld.com">jerry@seinfeld.com</a>
+              </p>
+              <p>
+                My phone number is:{" "}
+                <a href="tel:+34100572415">+34 100 57 24 15</a>
+              </p>
+            </address>
+          </section>
+        </div>
+      );
+    }
+    function Education() {
+      return (
+        <div>
+          <section id="Education">
+            <p>I have studied at:</p>
+            <ul>
+              <li>The Comedy Factory</li>
+              <li>New York City</li>
+            </ul>
+          </section>
+        </div>
+      );
+    }
+
+    function Work() {
+      return (
+        <div>
+          <section id="works">
+            <p>I have worked at:</p>
+            <div id="works_list">
+              <ul>
+                <li>
+                  Comedians in Cars getting Coffee as the lead host from 2012 to
+                  present and there I drive my guests around in cool cars and
+                  interview them about the interesting experinces they have had
+                  in life.
+                </li>
+                <li>
+                  The Seinfeld Show as the lead actor from 1989 to 1998 and
+                  there I had to keep the show going by being funny and
+                  charming.
+                </li>
+              </ul>
+            </div>
+          </section>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<App />, document.querySelector("#application-root"));
+  </script>
+</html>
